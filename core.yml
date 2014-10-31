@@ -1,0 +1,55 @@
+# These are stored in .bksconfig and can changed per install by the user
+# Vars ending in |*DirName| will be checked they exist
+userConfig:
+  dataDirPath: 
+  jobsDirName: jobs
+  ioDirName: io
+  inDirName: in
+  outDirName: out
+userConfigOptions:
+  # Optional custom prompts
+  prompts:
+    dataDirPath: Where is the data directory?
+    ioDirName: Custom transaction dir name?
+dataTypes:
+  bool: Boolean
+  num: Number
+  int: Integer
+  str: String
+  curr: Currency
+  date: Date
+  shortcode: Shorthand code
+  catcode: Category code
+expenseFields:
+  - slug: date
+    title: Purchase date
+    type: date
+    required: true
+  - slug: amount
+    title: Whole purchase amount (inc GST)
+    type: curr
+    required: true
+  - slug: gst
+    title: Has GST
+    type: bool
+    default:  true
+  - slug: deduction
+    title: Is deduction
+    type: bool
+    default: true
+  - slug: percentage
+    title: Percentage deductible
+    type: number
+    default: 1 
+  - slug: description
+    title: Description
+    type: str
+    required: false
+  - slug: shortcode
+    title: Shorthand code
+    type: shortcode
+    required: false  
+  - slug: catcode
+    title: Category code
+    type: catcode
+    required: false
