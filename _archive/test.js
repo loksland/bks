@@ -82,9 +82,9 @@ app.cmd('AMA', 'AMA', function(req, res){
 );
 
 app.cmd('AMAMULTI', 'AMA Multiple', function(req, res){
-  	req.question({'Your name': 'John Doe', 'Your_age': '30', 'Your starsign': 'Gemini'}, function(answers){
+  	req.question({'Your name': 'John Doe', 'yourAge': '30', 'Your starsign': 'Gemini'}, function(answers){
   		res.cyan(answers['Your name']).ln();
-  		res.cyan(answers['Your_age']).ln();
+  		res.cyan(answers.yourAge).ln();
   		res.cyan(answers['Your starsign']).ln();
   		res.prompt();
   	});
