@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 	// -------
 	grunt.loadNpmTasks('grunt-achtung');
 	grunt.config('achtung', {
-    src: '*.js'
+    src: ['*.js','lib/**/*.js']
   });
 	
 	// Watch
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 			options: {
 			event: ['changed'],
 			},
-			files: '*.js',
+			files: ['*.js','lib/**/*.js'],
 			tasks: ['on-js-changed']
 		}				
 	});
@@ -52,13 +52,13 @@ module.exports = function (grunt) {
 			'devel': true,
 			'node': true
     },
-    dev: ['*.js'],
+    dev: ['*.js','lib/**/*.js'],
     prod: {
       options: {
         'devel': false,
       },
       files: {
-        src: ['*.js']
+        src: ['*.js','lib/**/*.js']
       },
     }
 	});
