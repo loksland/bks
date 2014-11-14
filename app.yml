@@ -40,7 +40,7 @@ fields:
     - slug: percentage
       title: Percentage deductible
       type: percentage
-      default: 1.0
+      default: "1.0"
     - slug: capital
       title: Is capital expense
       type: bool
