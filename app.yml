@@ -9,26 +9,27 @@ dataTypes:
   curr: Currency
   date: Date
   choice: Choice
-fields:
-  out:
-    - slug: date
-      title: Purchase date
-      type: date
-      required: true
-      default: today
+entities:
+  out:  
+    fields:
     - slug: amount
       title: Whole purchase amount
       help: Include any GST
       type: curr
       required: true
+    - slug: date
+      title: Purchase date
+      type: date
+      required: true
+      default: today
+    - slug: title
+      title: Title
+      type: str
+      required: true 
     - slug: cat
       title: Category
       type: choice 
       required: true
-    - slug: description
-      title: Description
-      type: str
-      required: true 
     - slug: gst
       title: Has GST
       type: bool
@@ -41,8 +42,16 @@ fields:
       title: Percentage deductible
       type: percentage
       default: "1.0"
+    - slug: gstperc
+      title: GST %
+      type: percentage
+      setting: gstPercentage
     - slug: capital
       title: Is capital expense
       type: bool
       default: false
       help: A capital expense is either over $1000 or to be used for over ??? years
+
+    
+        
+    

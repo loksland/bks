@@ -36,14 +36,12 @@
   },
   "dependencies": {
     "ascii-table": "0.0.4",
-    "commander": "^2.3.0",
     "currency": "^0.1.2",
     "currency.js": "^0.2.1",
     "figlet": "^1.1.0",
     "js-yaml": "^3.2.2",
     "moment": "^2.8.3",
     "pad": "0.0.5",
-    "prompt": "^0.2.14",
     "shell": "^0.3.2",
     "user-settings": "^0.1.5"
   }
