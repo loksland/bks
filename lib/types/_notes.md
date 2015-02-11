@@ -12,3 +12,8 @@ readable
 --------
 - Returns string that can be interpreted by |setValue|
 - If empty then should return an empty data type when passed to |setValue|
+
+val
+---
+- Like 'readable' but returns a value representing data or null if not set
+- Should be able to be interpreted by |setValue|
