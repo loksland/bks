@@ -36,9 +36,9 @@
   },
   "dependencies": {
     "ascii-table": "0.0.4",
-    "currency": "^0.1.2",
     "currency.js": "^0.2.1",
     "figlet": "^1.1.0",
+    "globdule": "^1.0.7",
     "js-yaml": "^3.2.2",
     "moment": "^2.8.3",
     "pad": "0.0.5",

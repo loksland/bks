@@ -17,3 +17,7 @@ val
 ---
 - Like 'readable' but returns a value representing data or null if not set
 - Should be able to be interpreted by |setValue|
+
+clear
+-----
+- Removes data, putting the type into a brand-new state
