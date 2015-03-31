@@ -30,6 +30,7 @@ entities:
       title: Category
       type: choice 
       required: true
+      choicesConfig: cats 
     - slug: gst
       title: Has GST
       type: bool
@@ -51,5 +52,65 @@ entities:
       type: bool
       default: false
       help: A capital expense is either over $1000 or to be used for over ??? years
+  in:  
+    fields:
+    - slug: amount
+      title: Whole income amount
+      help: Include any GST
+      type: curr
+      required: true
+    - slug: date
+      title: Reveived date
+      type: date
+      required: true
+      default: today
+      help: Date of credit transaction in bank account statement
+    - cat: cat
+      title: Income category
+      type: choice
+      required: true
+      choicesConfig: cats 
+    - slug: invoice
+      title: Invoice number
+      type: str 
+      required: false
+    - slug: gstcat
+      title: GST category
+      type: choice 
+      required: true
+      default: gst
+      choicesConfig: gstcats 
+    - slug: gstperc
+      title: GST %
+      type: percentage
+      setting: gstPercentage    
+#  client:
+#    fields:
+#    - slug: name
+#      title: Name
+#      type: str
+#      required: true
+#    - slug: code
+#      title: Code (3 char)
+#      type: str
+#      required: true
+#  job:
+#    fields:
+#    - slug: title
+#      title: Title
+#      type: str
+#      required: true
+#    - slug: num
+#      title: Number
+#      type:  num
+#      required: true       
+#    - slug: client
+#      title: Client
+#      type: str
+#      required: true 
+#    - slug: cat
+#      title: Category
+#      type: choice
+#      required: true
+#      default: gst
 
-    
