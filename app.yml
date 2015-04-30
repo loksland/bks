@@ -45,10 +45,6 @@ entities:
       title: Percentage deductible
       type: percentage
       default: "1.0"
-    - slug: gstperc
-      title: GST %
-      type: percentage
-      setting: gstPercentage
     - slug: capital
       title: Is capital expense
       type: bool
@@ -59,6 +55,10 @@ entities:
       type: str 
       required: false
       help: Any additional notes about the transaction
+    - slug: gstperc
+      title: GST %
+      type: percentage
+      setting: gstPercentage
   in:  
     fields:
     - slug: amount
@@ -73,7 +73,7 @@ entities:
       default: today
       help: Date of credit transaction in bank account statement
     - slug: title
-      title: Invoice# or SKU ref
+      title: Invoice# or SKU ref or Title
       type: str
       required: true
       help: Eg. 'CCC123-1' for invoice.
@@ -83,15 +83,24 @@ entities:
       required: true
       default: gst
       choicesConfig: gstcats 
-    - slug: gstperc
-      title: GST %
-      type: percentage
-      setting: gstPercentage  
     - slug: notes
       title: Notes
       type: str 
       required: false
       help: Any additional notes about the transaction
+    - slug: gstperc
+      title: GST %
+      type: percentage
+      setting: gstPercentage  
+#    - slug: taxable
+#      title: Is taxable income
+#      type: bool
+#      default: true
+#    - slug: cat
+#      title: Category
+#      type: choice 
+#      required: false
+#      choicesConfig: cats 
 #  client:
 #    fields:
 #    - slug: name

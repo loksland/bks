@@ -1,0 +1,8 @@
+# Everything here will override the data/config.yml data
+entities:
+  in:
+    gstcats: 
+      gst: Amount includes GST portion
+      export: GST free export - free on board value
+      other: GST free other - EG amount received for freight and insurance relating to GST free export
+#      none: For non-taxable income

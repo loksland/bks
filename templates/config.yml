@@ -1,0 +1,83 @@
+dirNames:
+  io: io
+  in: in
+  out: out
+  scour: scour
+  scourProcessed: processed
+settings:
+  gstPercentage: 0.1
+scour:
+  nab-offset.csv: # will look for this pattern in the filename
+    colDelimiter: ',' 
+    headerRow: false
+    reverse: true
+    fields:
+      0: date
+      1: amount   
+      2: notes    
+      4: notes
+      5: notes  
+  nab-visa.csv:  
+    colDelimiter: ','
+    headerRow: false
+    reverse: true
+    fields:
+      0: date
+      1: amount        
+      4: notes
+      5: notes
+entities:
+  out:
+    cats:
+      office: Home office expenses
+      travel: Vehicle and travel expenses
+      clothing: Clothing, laundry and dry-cleaning expenses
+      gift: Gifts and donations
+      interest: Interest, dividend and other investment income deductions
+      edu: Self-education expenses
+      tools: Tools, equipment and other assets
+      other: Other deductions
+      health: Non-deductible healthcare expenses
+    # Use _title if you don't want to set the field's title with the short code
+    shortcodes: # shortcodes are not saved in the file as they are fluid
+      healthcare:
+        title: Health care expense
+        deduction: false
+        percentage: 0.0
+        cat: health
+    scourrules:
+    - title: ATM withdrawal
+      critera: 
+        notes: [ATM,FEES]
+      actions: 
+        autoSkip: true # can be skip / autoskip
+#     fields: # can supply fields (shortcode would be useful)
+#       shortcode: foobar
+    - critera: 
+        notes: [COLES,EFTPOS]
+      actions: 
+        autoSkip: true
+    - critera: 
+        notes: ATM DEBIT
+      actions: 
+        autoSkip: true
+  in:
+    cats:
+      health: Non-taxable healthcare refunds  
+    shortcodes:
+      freelance: 
+        _title: Freelance
+        cat: freelance
+        gstcat: gst        
+      au-appsales:
+        _title: App sales
+        cat: appsales
+        gstcat: gst
+      international-appsales:
+        _title: Export
+        gstcat: export
+    earmarks:
+      charity:
+        title: Charitable donation
+        percentage: .02 # percentage is applied to pre-tax income (not including GST)
+    

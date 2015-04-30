@@ -21,13 +21,6 @@ $ bks
 You will be prompted for a path to the data directory. Best to point this to a private 
 repository.
 
-You will be asked if you want to customise the directory names or add sample data if the 
-data dir is empty.
-
-**Updates**
-
-You will be informed when an updated version of bks is available.
-
 Data structure
 --------------
 
@@ -74,19 +67,14 @@ bks >> new in
 Create a new income record
 
 ```bash
-bks >> new job
+bks >> bas
 ```
-Create a new job
+Output a BAS statement
 
 ```bash
-bks >> list jobs
+bks >> scour
 ```
-Lists all active jobs
+Scour bank statements for income / outgoings
 
-Code structure
---------------
 
-- bks.js  
-Handles first run and update notification, passes commands and config to libs that do the 
-work.
 
