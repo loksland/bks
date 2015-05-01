@@ -41,7 +41,7 @@ not rely on any data from this file.
     - in
     - out
 
-Proposed commands
+Commands
 -----------------
 
 *Bks runs in an interactive shell*
@@ -76,5 +76,8 @@ bks >> scour
 ```
 Scour bank statements for income / outgoings
 
+### Release History ###
 
-
+- v0.1.7 - Scour formatting
+- v0.1.6 - Scour improvements
+- v0.1.1 - Initial release

@@ -1,6 +1,6 @@
 {
   "name": "bks",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Command line bookkeeping, built for Australian freelancers",
   "main": "index.js",
   "scripts": {
