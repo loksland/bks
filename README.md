@@ -78,6 +78,7 @@ Scour bank statements for income / outgoings
 
 ### Release History ###
 
+- v0.1.8 - Fix GST calculation error
 - v0.1.7 - Scour formatting
 - v0.1.6 - Scour improvements
 - v0.1.1 - Initial release
