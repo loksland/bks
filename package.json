@@ -1,6 +1,6 @@
 {
   "name": "bks",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Command line bookkeeping, built for Australian freelancers",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "bin": {
-    "bks": "index.js" 
+    "bks": "index.js"
   },
   "dependencies": {
     "ascii-table": "0.0.4",
@@ -38,6 +38,7 @@
     "moment": "^2.8.3",
     "pad": "0.0.5",
     "shell": "^0.3.2",
-    "user-settings": "^0.1.5"
+    "user-settings": "^0.1.5",
+    "xlsx": "^0.8.0"
   }
 }
