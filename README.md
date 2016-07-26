@@ -78,6 +78,7 @@ Scour bank statements for income / outgoings
 
 ### Release History ###
 
+- v0.2.7 - Dependency updates and workarounds
 - v0.2.1 - Export tax return as .xlsx file
 - v0.1.9 - Allow ':X' input on boolean skip input
 - v0.1.8 - Fix GST calculation error
